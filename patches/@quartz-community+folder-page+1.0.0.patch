@@ -1,0 +1,63 @@
+diff --git a/node_modules/@quartz-community/folder-page/.DS_Store b/node_modules/@quartz-community/folder-page/.DS_Store
+new file mode 100644
+index 0000000..c88a062
+Binary files /dev/null and b/node_modules/@quartz-community/folder-page/.DS_Store differ
+diff --git a/node_modules/@quartz-community/folder-page/dist/components/index.js b/node_modules/@quartz-community/folder-page/dist/components/index.js
+index 7e81d42..8849d7d 100644
+--- a/node_modules/@quartz-community/folder-page/dist/components/index.js
++++ b/node_modules/@quartz-community/folder-page/dist/components/index.js
+@@ -421,6 +421,7 @@ var PageList = ({
+   return /* @__PURE__ */ u2("ul", { class: "section-ul", children: list.map((page) => {
+     const title = page.frontmatter?.title;
+     const tags = page.frontmatter?.tags ?? [];
++    const description = page.frontmatter?.description;
+     return /* @__PURE__ */ u2("li", { class: "section-li", children: /* @__PURE__ */ u2("div", { class: "section", children: [
+       /* @__PURE__ */ u2("p", { class: "meta", children: page.dates && getDate(page) && /* @__PURE__ */ u2(
+         DateDisplay,
+@@ -429,14 +430,15 @@ var PageList = ({
+           locale: cfg?.locale ?? "en-US"
+         }
+       ) }),
+-      /* @__PURE__ */ u2("div", { class: "desc", children: /* @__PURE__ */ u2("h3", { children: /* @__PURE__ */ u2(
++      /* @__PURE__ */ u2("div", { class: "desc", children: [/* @__PURE__ */ u2("h3", { children: /* @__PURE__ */ u2(
+         "a",
+         {
+           href: resolveRelative(fileSlug ?? "", page.slug),
+           class: "internal",
+           children: title
+         }
+-      ) }) }),
++      ) }), description ? u2("p", { class: "card-desc", children: description }) : null] }),
++
+       /* @__PURE__ */ u2("ul", { class: "tags", children: tags.map((tag) => /* @__PURE__ */ u2("li", { children: /* @__PURE__ */ u2(
+         "a",
+         {
+diff --git a/node_modules/@quartz-community/folder-page/dist/index.js b/node_modules/@quartz-community/folder-page/dist/index.js
+index 3fa4909..0ace1cf 100644
+--- a/node_modules/@quartz-community/folder-page/dist/index.js
++++ b/node_modules/@quartz-community/folder-page/dist/index.js
+@@ -407,6 +407,7 @@ var PageList = ({
+   return /* @__PURE__ */ u2("ul", { class: "section-ul", children: list.map((page) => {
+     const title = page.frontmatter?.title;
+     const tags = page.frontmatter?.tags ?? [];
++    const description = page.frontmatter?.description;
+     return /* @__PURE__ */ u2("li", { class: "section-li", children: /* @__PURE__ */ u2("div", { class: "section", children: [
+       /* @__PURE__ */ u2("p", { class: "meta", children: page.dates && getDate(page) && /* @__PURE__ */ u2(
+         DateDisplay,
+@@ -415,14 +416,14 @@ var PageList = ({
+           locale: cfg?.locale ?? "en-US"
+         }
+       ) }),
+-      /* @__PURE__ */ u2("div", { class: "desc", children: /* @__PURE__ */ u2("h3", { children: /* @__PURE__ */ u2(
++      /* @__PURE__ */ u2("div", { class: "desc", children: [/* @__PURE__ */ u2("h3", { children: /* @__PURE__ */ u2(
+         "a",
+         {
+           href: resolveRelative(fileSlug ?? "", page.slug),
+           class: "internal",
+           children: title
+         }
+-      ) }) }),
++      ) }), description ? u2("p", { class: "card-desc", children: description }) : null] }),
+       /* @__PURE__ */ u2("ul", { class: "tags", children: tags.map((tag) => /* @__PURE__ */ u2("li", { children: /* @__PURE__ */ u2(
+         "a",
+         {

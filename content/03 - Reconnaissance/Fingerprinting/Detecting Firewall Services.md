@@ -1,0 +1,1 @@
+- Refer [[Wafw00f]] for technique and explanation

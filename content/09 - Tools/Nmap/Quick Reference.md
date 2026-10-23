@@ -1,0 +1,31 @@
+```bash
+-p        Port specification
+-p-       All 65535 TCP ports
+-F        Fast/common ports
+-sn       Host discovery only
+-Pn       Skip host discovery
+-sS       TCP SYN scan
+-sT       TCP Connect scan
+-sU       UDP scan
+-sA       TCP ACK scan
+-sN       TCP Null scan
+-sF       TCP FIN scan
+-sX       TCP Xmas scan
+-sV       Service/version detection
+-sC       Default NSE scripts
+-A        Aggressive scan
+-O        OS detection
+--script  NSE scripts
+-T0..T5   Timing template
+--min-rate Minimum packet rate
+--max-rate Maximum packet rate
+-n        Disable DNS resolution
+--open    Show only open ports
+--reason  Show reason for port state
+-v        Verbose
+-vv       Very verbose
+-oN       Normal output
+-oX       XML output
+-oG       Grepable output
+-oA       All major output formats
+```

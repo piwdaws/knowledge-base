@@ -1,0 +1,1 @@
+- Oracle Transparent Network Substrate (NTS)  server is a communication protocol that facilitates communication between Oracle databases and applications over networks.

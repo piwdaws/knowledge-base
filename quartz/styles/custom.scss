@@ -1,3 +1,82 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+/* --- Code blocks --- */
+pre {
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  background-color: #f1f3f5 !important;
+  border: 1px solid #e9ecef !important;
+
+  code {
+    color: #212529;
+  }
+}
+
+:root[saved-theme="dark"] pre {
+  background-color: #161b22 !important;
+  border: 1px solid #2d3139 !important;
+
+  code {
+    color: #f8f9fa;
+  }
+}
+
+/* --- Hide dates --- */
+.meta,
+.content-meta,
+.dates,
+time {
+  display: none !important;
+}
+
+/* --- Card-style list entries --- */
+ul.section-ul {
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+li.section-li {
+  padding: 1.25rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--lightgray);
+  background-color: #ffffff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+
+  a {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--dark); /* adapts to light/dark automatically */
+  }
+
+  &:hover {
+    transform: translateX(4px);
+    border-color: var(--secondary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+}
+
+:root[saved-theme="dark"] li.section-li {
+  background-color: var(--lightgray);
+  border-color: #2d3139;
+
+  &:hover {
+    background-color: #1f2430;
+  }
+}
+
+.section {
+  display: block;
+}
+
+.card-desc {
+  margin: 0.4rem 0 0;
+  font-size: 0.9rem;
+  color: var(--gray);
+}

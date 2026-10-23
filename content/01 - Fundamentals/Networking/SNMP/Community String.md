@@ -1,0 +1,2 @@
+- Text password used to authenticate requests between your management tool (or attack machine) and the network device.
+- Older version of SMNP (v1 & v2) these password is sent across network in cleartext

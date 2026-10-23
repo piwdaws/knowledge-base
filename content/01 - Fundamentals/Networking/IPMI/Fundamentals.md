@@ -1,0 +1,2 @@
+- Intelligent Management Platform Interface (IPMI) is dedicated hardware and software that allow system admin manage and monitor server remotely without entering server room
+- Think of its as separate computer that still run even if the server crashed or turn off

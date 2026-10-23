@@ -1,0 +1,2 @@
+- Microsoft SQL(MSSQL) is Microsoft's SQL-based relational database management system.
+- Closed Sourced
