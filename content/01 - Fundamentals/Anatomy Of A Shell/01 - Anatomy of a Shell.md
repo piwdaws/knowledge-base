@@ -68,3 +68,4 @@ env
 ## Related stuff
 [[Bind Shell]]
 [[Reverse Shell]]
+[[Web Shell]]

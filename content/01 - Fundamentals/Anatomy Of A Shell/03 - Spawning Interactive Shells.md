@@ -82,7 +82,27 @@ vim -c ':!/bin/sh'
 
 ---
 
+## Execution Permission Consideration
+- It possible to run as root a program SUID Executable is set to root
+```bash
+# We know the owner of this file is root
+# The owner part of rws got s on it. Mean the SUID Executable is set to the owner which is root
+# Mean any user runs this program, it executes with the Effective user ID in this case root rather than the user who launched it
+-rwsr-xr-x 1 root root 1200 program
+```
 
 
+- Another way would be by using sudo -l to check whether we can execute command as root
+```bash
+sudo -l
+Matching Defaults entries for apache on ILF-WebSrv:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin
 
-
+User apache may run the following commands on ILF-WebSrv:
+    (ALL : ALL) NOPASSWD: ALL
+```
+- Here some breakdown:
+	- (ALL : ALL) : This allow us to run as any user and group. That include root
+	- NOPASSWD: Normally sudo would ask pass. But this will remove that
+	- ALL : means any command is ok.
