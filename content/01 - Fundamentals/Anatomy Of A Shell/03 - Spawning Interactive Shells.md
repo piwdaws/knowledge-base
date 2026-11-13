@@ -12,7 +12,7 @@
 python3 -c 'import pty; pty.spawn("/bin/bash")'
 
 # Python 2
-python = -c 'import pty; pty.spawn("/bin/bash")'
+python -c 'import pty; pty.spawn("/bin/bash")'
 ```
 ---
 ## Spawn a shell with /bin/sh

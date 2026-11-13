@@ -1,56 +1,3 @@
-## Some important Command
-```sql
--- Who am I?
-SELECT SYSTEM_USER;
-SELECT USER_NAME();
-
--- What version?
-SELECT @@VERSION;
-
--- What database am I in?
-SELECT DB_NAME();
-
--- Am I sysadmin?
-SELECT IS_SRVROLEMEMBER('sysadmin');
-
--- What databases exist?
-SELECT name FROM sys.databases;
-
--- Switch database
-USE <database>;
-
--- What tables exist?
-SELECT name FROM sys.tables;
-
--- What columns does a table have?
-SELECT COLUMN_NAME, DATA_TYPE
-FROM information_schema.columns
-WHERE TABLE_NAME='<table>';
-
--- Read a table
-SELECT * FROM <table>;
-
--- List database users
-SELECT name FROM sys.database_principals;
-
--- List server logins
-SELECT name, type_desc
-FROM master.sys.server_principals;
-
--- Check xp_cmdshell
-EXEC sp_configure 'xp_cmdshell';
-
--- Enable xp_cmdshell
-EXEC sp_configure 'xp_cmdshell', 1;
-RECONFIGURE;
-
--- Execute Windows command
-EXEC xp_cmdshell '<command>';
-
--- Linked servers
-EXEC sp_linkedservers;
-```
-
 ### MSSQL Pentesting Command Reference
 
 | Category | Command / Syntax | What it does |
@@ -90,5 +37,4 @@ EXEC sp_linkedservers;
 | **Linked Servers** | `EXEC sp_linkedservers;` | Lists configured linked servers. |
 | **Linked Servers** | `SELECT * FROM sys.servers;` | Displays server/linked-server configuration. |
 | **SQL Agent** | `SELECT name, enabled FROM msdb.dbo.sysjobs;` | Lists SQL Server Agent jobs. |
-| **Current DB** | `SELECT DB_NAME();` | Displays the database currently being used. |
 | **Current Login** | `SELECT ORIGINAL_LOGIN();` | Shows the original login used to establish the session. |

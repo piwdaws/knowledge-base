@@ -1,68 +1,3 @@
-## Some Important Command
-```sql
--- Who am I? 
-SELECT USER(); 
-SELECT CURRENT_USER(); 
-
--- What version? 
-SELECT VERSION(); 
-
--- What is the server hostname? 
-SELECT @@hostname; 
-
--- What databases can I access? 
-SHOW DATABASES; 
-
--- What database am I currently using? 
-SELECT DATABASE(); 
-
--- Switch database 
-USE <database>; 
-
--- What tables exist? 
-SHOW TABLES; 
-
--- What columns does a table have? 
-SHOW COLUMNS FROM <table>; 
-
--- Alternative table structure command 
-DESCRIBE <table>; 
-
--- Read a table 
-SELECT * FROM <table>; 
-
--- Read the first 10 rows 
-SELECT * FROM <table> LIMIT 10; 
-
--- Search for a specific value 
-SELECT * FROM <table> WHERE <column>='<value>'; 
-
--- List MySQL users 
-SELECT user, host FROM mysql.user; 
-
--- Check current privileges 
-SHOW GRANTS; 
-
--- Check another user's privileges 
-SHOW GRANTS FOR '<user>'@'<host>'; 
-
--- Check secure_file_priv 
-SHOW VARIABLES LIKE 'secure_file_priv'; 
-
--- Find MySQL data directory 
-SELECT @@datadir; 
-
--- Read a file 
-SELECT LOAD_FILE('<path>'); 
-
--- Write query output to a file 
-SELECT '<data>' INTO OUTFILE '<path>'; 
-
--- Write raw data to a file 
-SELECT '<data>' INTO DUMPFILE '<path>';
-
-```
-
 ### MySQL Pentesting Command Reference
 
 | Category | Command / Syntax | What it does |
@@ -86,7 +21,6 @@ SELECT '<data>' INTO DUMPFILE '<path>';
 | **Users** | `SELECT user, host, authentication_string FROM mysql.user;` | Displays MySQL users and stored authentication data. |
 | **Privileges** | `SHOW GRANTS FOR '<user>'@'<host>';` | Displays the privileges assigned to a MySQL account. |
 | **Privileges** | `SHOW GRANTS;` | Displays privileges for the current account. |
-| **Configuration** | `SHOW VARIABLES;` | Displays MySQL configuration variables. |
 | **Configuration** | `SHOW VARIABLES LIKE '%secure%';` | Searches configuration variables related to security/file access. |
 | **Configuration** | `SHOW VARIABLES LIKE 'secure_file_priv';` | Checks the `secure_file_priv` restriction. |
 | **File Read** | `SELECT LOAD_FILE('<path>');` | Attempts to read a file from the MySQL server filesystem. |

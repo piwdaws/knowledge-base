@@ -9,7 +9,7 @@
 ## Example Host Header
 ```http
 GET /index.html HTTP/1.1
-Host: ://mysite.com
+Host: mysite.com
 ```
 - It look at the Host Header on what our request is
 

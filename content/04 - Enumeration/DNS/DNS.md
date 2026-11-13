@@ -25,7 +25,7 @@ Here an example output. We discover another IP address 10.129.34.136
 ---
 ## Version Query
 ```bash
-dig CH TXT version.bind 10.129.120.85
+dig CH TXT version.bind @10.129.120.85
 ```
 
 ---
