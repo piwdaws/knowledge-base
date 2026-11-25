@@ -4,3 +4,6 @@
 evil-winrm -i <target-IP> -u <username> -p <password>
 ```
 - Drops us into a PowerShell session on the target
+
+---
+- Pass the Hash: `-H <hash>` instead of `-p password` — see [[Pass The Hash]]

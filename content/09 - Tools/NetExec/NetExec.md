@@ -14,3 +14,9 @@ netexec smb 10.129.42.197 -u user -p password --shares   # list shares + permiss
 
 ---
 - Also used for: dumping SAM/LSA remotely (`--sam`, `--lsa`), AD dictionary attacks, dumping NTDS.dit (`-M ntdsutil`) — see [[02 - Attacking SAM]] and [[06 - Attacking Active Directory and NTDS]]
+
+---
+- Also used for: spidering shares for keyword matches (`--spider <share> --content --pattern "passw"`) — see [[Credential Hunting in Network Share]]
+
+---
+- Pass the Hash: swap `-p password` for `-H <hash>` — see [[Pass The Hash]]

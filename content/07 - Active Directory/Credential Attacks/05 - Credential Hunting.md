@@ -11,20 +11,15 @@ findstr /SIM /C:"password" *.txt *.ini *.cfg *.config *.xml *.ps1 *.yml
 ## LaZagne (pulls saved creds from installed apps)
 ```cmd
 LaZagne.exe all
-
-# Example Output
-------------------- Winscp passwords -----------------  
-[+] Password found !!!  
-URL: 10.129.202.51  
-Login: admin  
-Password: SteveisReallyCool123
 ```
-
-- checks browsers, chat apps, mail clients, sysadmin tools (WinSCP, OpenVPN), wifi, and Windows creds all in one go
-- browsers are the most common hit, since Chrome/Edge/Firefox save logins by default
+See [[LaZagne]] for the full tool note (it also works the same way on Linux, see [[Credentials Hunting]] (Linux version) for that side).
 
 ## Other places worth checking
 - `unattend.xml` (used during Windows install, sometimes has admin password)
 - scripts/configs on shared IT drives (SYSVOL share on a DC especially)
 - AD user/computer **description field** (admins sometimes dump the password there as a note, don't ask why)
 - files literally named `password.txt`, `passwords.xlsx`
+
+---
+
+See also: [[Credential Hunting in Network Traffic]] · [[Credential Hunting in Network Share]] for hunting beyond the local machine

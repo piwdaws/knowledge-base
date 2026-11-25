@@ -61,3 +61,7 @@ john --show zip.hash
 
 ---
 - See [[Cracking Protected Files]] and [[Cracking Protected Archives]] for ssh key, office doc, pdf, zip and bitlocker examples
+
+---
+## Cracking Linux Logins
+- See [[Cracking Linux Credentials]] for the `unshadow` + passwd/shadow technique, single crack mode is built exactly for this

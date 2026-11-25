@@ -31,4 +31,4 @@ This matters because it tells us **where** to look depending on what kind of acc
 - Lets users/apps save creds for OTHER systems and sites (RDP, mapped drives, websites) so you don't retype them
 - Stored encrypted under the user's own profile, so we need access as that user (or need to decrypt it with something like Mimikatz) to get the password back out
 
-See: [[02 - Attacking SAM]] · [[03 - Attacking LSASS]] · [[06 - Attacking Active Directory and NTDS]] · [[04 - Attacking Credential Manager]] · [[05 - Credential Hunting]]
+See: [[02 - Attacking SAM]] · [[03 - Attacking LSASS]] · [[06 - Attacking Active Directory and NTDS]] · [[04 - Attacking Credential Manager]] · [[05 - Credential Hunting]] · [[Pass The Hash]] · [[Pass The Ticket (Windows)]] · [[Pass the Ticket (Linux)]] · [[Pass The Certificate]]
