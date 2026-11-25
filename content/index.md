@@ -20,7 +20,7 @@ I write them in simple words on purpose. If I can't explain it simply, I haven't
 | Topic | What's inside |
 | --- | --- |
 | [[01 - Fundamentals/index\|Fundamentals]] | Networking, Linux, Windows, Programming |
-| [[02 - Web Security/index\|Web Security]] | Injection, Authentication, Authorization, API Security, and more |
+| [[02 - Web Security/index\|Web Security]] | WIP |
 | [[03 - Reconnaissance/index\|Reconnaissance]] | Finding information about a target |
 | [[04 - Enumeration/index\|Enumeration]] | Digging deeper into services and hosts |
 | [[05 - Exploitation/index\|Exploitation]] | Turning a weakness into access |
@@ -28,10 +28,10 @@ I write them in simple words on purpose. If I can't explain it simply, I haven't
 | [[07 - Active Directory/index\|Active Directory]] | Attacking Windows domains |
 | [[08 - Passwords & Hashes/index\|Passwords & Hashes]] | Cracking and attacking credentials |
 | [[09 - Tools/index\|Tools]] | The tools I use and how |
-| [[10 - CTF/index\|CTF]] | CTF Writeup |
+| [[10 - CTF/index\|CTF]] | WIP |
 | [[11 - Labs & Writeups/index\|Labs & Writeups]] | My personal writeup for labs and research notes  |
-| [[12 - Cheat Sheet/index\|Cheat Sheet]] | Quick commands and reminders |
-| [[13 - Payload & Shell/index\|Payload & Shell]] | Payloads and reverse shells |
+| [[12 - Cheat Sheet/index\|Cheat Sheet]] | WIP |
+| [[13 - Payload & Shell/index\|Payload & Shell]] | WIP |
 
 ## About this site
 
