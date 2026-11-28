@@ -60,7 +60,7 @@ john --show zip.hash
 ```
 
 ---
-- See [[Cracking Protected Files]] and [[Cracking Protected Archives]] for ssh key, office doc, pdf, zip and bitlocker examples
+- See [[02 - Cracking Protected Files]] and [[03 - Cracking Protected Archive]] for ssh key, office doc, pdf, zip and bitlocker examples
 
 ---
 ## Cracking Linux Logins
